@@ -29,13 +29,13 @@ export async function getSlugs(type) {
   let elements = [];
   switch (type) {
     case "posts":
-      elements = await getPosts();
+      elements2 = await getPosts();
       break;
     case "events":
       elements = await getEvents();
       break;
   }
-  const elementsIds = map((element) => {
+  const elementsIds = elements2.map((element,index) => {
     return {
       params: {
         slug: element.slug,
