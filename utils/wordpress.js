@@ -35,7 +35,7 @@ export async function getSlugs(type) {
       elements = await getEvents();
       break;
   }
-  const elementsIds = elements.map((element) => {
+  const elementsIds = posts.elements.map((element) => {
     return {
       params: {
         slug: element.slug
